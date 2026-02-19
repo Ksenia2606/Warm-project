@@ -1,0 +1,27 @@
+@use "/src/scss/base/variables.scss" as *;
+
+@mixin title {
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    color: $black;
+}
+
+@mixin paragraph {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: $black;
+}
+
+@mixin button {
+    display: block;
+    padding: 12px 80px 16px 80px;
+    border-radius: $border-radius;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+    cursor: pointer;
+}

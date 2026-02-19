@@ -1,0 +1,93 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.product-card {
+    width: calc((100% - 60px) / 3);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $beige;
+        border-radius: $border-radius-sm;
+    }
+
+    &__img {
+        width: 71%;
+        height: auto;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__descr-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .product-card {
+        width: calc((100% - 40px) / 3);
+
+        &__wrapper {
+            gap: 15px;
+        }
+
+        &__text-wrapper {
+            gap: 3px;
+        }
+
+        &__descr-wrapper {
+            gap: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .product-card {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .product-card {
+
+        &__wrapper {
+            gap: 10px;
+        }
+
+        &__image-wrapper {
+            aspect-ratio: 21 / 23;
+        }
+
+        &__text-wrapper {
+            gap: 1px;
+        }
+
+        &__descr-wrapper {
+            gap: 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-card {
+        width: 100%;
+
+        &__image-wrapper {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use "/src/scss/base/mixins.scss" as *;
+@use "/src/scss/base/variables.scss" as *;
+
+.button-black {
+    @include button;
+    max-width: 256px;
+    background-color: $black;
+    font-size: 21px;
+    color: $white;
+}
+
+@media screen and (max-width: 700px) {
+    .button-black {
+        max-width: 236px;
+        font-size: 17px;
+    }
+}

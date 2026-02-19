@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warm project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <include file="/src/html/header.html"></include>
+
+  <section class="promo">
+    <div class="promo__bg">
+      <div class="promo__beige-bg"></div>
+      <div class="promo__dark-bg"></div>
+    </div>
+    <div class="container">
+
+      <div class="promo__wrapper">
+
+        <div class="promo__cta">
+          <div class="promo__info">
+            <h1 class="promo__title title-h1">Soft plaids<br>for your comfort</h1>
+            <p class="promo__text txt">Throw a blanket over your shoulders or place it on the arm of the sofa, and the
+              atmosphere in the house will be warmer.</p>
+          </div>
+          <button class="promo__button button-black">Shop now</button>
+        </div>
+
+        <div class="promo__img">
+          <img src="/images/promo-img.png" alt="blanket">
+        </div>
+
+        <div class="promo__pagination">
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet-active"></span>
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet"></span>
+          <span class="pagination-bullet"></span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bestsellers">
+    <div class="container">
+
+      <h2 class="bestsellers__title title-h2">Popular products</h2>
+
+      <div class="bestsellers__wrapper">
+        <include class="bestsellers__card" file="/src/html/product-card.html"></include>
+        <include class="bestsellers__card" file="/src/html/product-card.html"></include>
+        <include class="bestsellers__card" file="/src/html/product-card.html"></include>
+      </div>
+
+      <div class="bestsellers__pagination">
+        <include file="/src/html/unordered-pagination.html"></include>
+      </div>
+
+    </div>
+  </section>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

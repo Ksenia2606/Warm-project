@@ -1,0 +1,220 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.promo {
+    padding: 180px 0 200px 0;
+    position: relative;
+
+    &__bg {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__beige-bg {
+        background-color: $beige;
+        width: 63vw;
+    }
+
+    &__dark-bg {
+        background-color: $black;
+        background-image: url('/images/promo-bg.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+        width: 37vw;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        z-index: 1;
+    }
+
+    &__info {
+        max-width: 452px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__text {
+        width: 440px;
+    }
+
+    &__img {
+        transform: rotate(10deg);
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            width: 216px;
+            height: 216px;
+            border: 3px solid $black;
+            border-radius: $radius-round;
+            position: absolute;
+            top: -60px;
+            left: -40px;
+            clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+        }
+
+        &::after {
+            content: "";
+            width: 216px;
+            height: 216px;
+            border: 3px solid $white;
+            border-radius: $radius-round;
+            position: absolute;
+            bottom: -60px;
+            right: -70px;
+            clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        z-index: 1;
+    }
+
+    .pagination-bullet {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: $radius-round;
+        background-color: $white;
+        opacity: 0.3;
+    }
+
+    .pagination-bullet-active {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: $radius-round;
+        background-color: $white;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .promo {
+        padding: 90px 0 120px 0;
+
+        &__beige-bg {
+            width: 68vw;
+        }
+
+        &__dark-bg {
+            width: 32vw;
+        }
+
+        &__img {
+            width: 312px;
+            height: 300px;
+
+            &::after {
+                right: -55px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .promo {
+
+        &__img {
+            width: 251px;
+            height: 241px;
+            position: absolute;
+            top: 66%;
+            left: 52%;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .promo {
+        padding: 70px 0 90px 0;
+
+        &__bg {
+            flex-direction: column;
+        }
+
+        &__beige-bg {
+            width: 100%;
+            height: 466px;
+        }
+
+        &__dark-bg {
+            width: 100%;
+            height: 235px;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            height: 541px;
+        }
+
+        &__cta {
+            gap: 35px;
+        }
+
+        &__info {
+            gap: 20px;
+        }
+
+        &__text {
+            width: 100%;
+        }
+
+        &__img {
+            width: 180px;
+            height: 174px;
+            top: 54%;
+            left: 55%;
+        }
+
+        &__pagination {
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .promo {
+
+        &__beige-bg {
+            height: 470px;
+        }
+
+        &__dark-bg {
+            height: 360px;
+        }
+
+        &__wrapper {
+            height: 597px;
+        }
+
+        &__img {
+            position: static;
+        }
+    }
+}

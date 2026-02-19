@@ -1,0 +1,61 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.bestsellers {
+    padding: 130px 0 150px 0;
+
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__pagination {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .bestsellers {
+        padding: 90px 0 110px 0;
+
+        &__wrapper {
+            margin-top: 50px;
+        }
+
+        &__pagination {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .bestsellers {
+
+        &__card:nth-child(3) {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .bestsellers {
+        padding: 70px 0 90px 0;
+
+        &__wrapper {
+            margin-top: 40px;
+        }
+
+        &__pagination {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bestsellers {
+
+        &__card:nth-child(2) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    &__wrapper {
+        display: flex;
+        gap: 30px;
+    }
+
+    &-bullet {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: $radius-round;
+        background-color: $black;
+        opacity: 0.3;
+    }
+
+    &-bullet-active {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: $radius-round;
+        background-color: $black;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .pagination {
+
+        .icon-left-open {
+            display: none;
+        }
+
+        .icon-right-open {
+            display: none;
+        }
+    }
+}
