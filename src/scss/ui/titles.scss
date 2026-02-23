@@ -11,8 +11,18 @@
     font-size: 48px;
 }
 
+.title-h2-white {
+    @include title-white;
+    font-size: 48px;
+}
+
 .title-h3 {
     @include title;
+    font-size: 36px;
+}
+
+.title-h3-white {
+    @include title-white;
     font-size: 36px;
 }
 
@@ -23,6 +33,11 @@
 
 .txt {
     @include paragraph;
+    font-size: 21px;
+}
+
+.txt-white {
+    @include paragraph-white;
     font-size: 21px;
 }
 
@@ -37,8 +52,18 @@
         font-size: 40px;
     }
 
+    .title-h2-white {
+        @include title-white;
+        font-size: 40px;
+    }
+
     .title-h3 {
         @include title;
+        font-size: 28px;
+    }
+
+    .title-h3-white {
+        @include title-white;
         font-size: 28px;
     }
 
@@ -51,6 +76,11 @@
         @include paragraph;
         font-size: 17px;
     }
+
+    .txt-white {
+        @include paragraph-white;
+        font-size: 17px;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -61,6 +91,11 @@
 
     .title-h2 {
         @include title;
+        font-size: 36px;
+    }
+
+    .title-h2-white {
+        @include title-white;
         font-size: 36px;
     }
 }

@@ -5,6 +5,7 @@
     @include button;
     max-width: 256px;
     background-color: $black;
+    border: 1px solid $black;
     font-size: 21px;
     color: $white;
 
@@ -24,9 +25,38 @@
     }
 }
 
+.button-white {
+    @include button;
+    min-width: 266px;
+    background-color: $white;
+    border: 1px solid $white;
+    font-size: 21px;
+    color: $black;
+
+    &:hover {
+        background-color: transparent;
+        color: $white;
+    }
+
+    &:active {
+        transform: scale(102%, 102%);
+    }
+
+    &:focus-visible {
+        background-color: $white;
+        color: $white;
+        outline: 1px solid $white;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .button-black {
         max-width: 237px;
+        font-size: 17px;
+    }
+
+    .button-white {
+        min-width: 247px;
         font-size: 17px;
     }
 }
