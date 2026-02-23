@@ -3,10 +3,11 @@
 
 @use "/src/scss/ui/buttons.scss";
 @use "/src/scss/ui/titles.scss";
-@use "/src/scss/ui/unordered-pagination.scss";
-@use "/src/scss/ui/product-card.scss";
+@use "/src/components/unordered-pagination/unordered-pagination.scss";
+@use "/src/components/product-card/product-card.scss";
+@use "/src/components/product-card-active/product-card-active.scss";
 
-@use "/src/scss/blocks/header.scss";
+@use "/src/components/header/header.scss";
 
 @use "/src/scss/blocks/promo.scss";
 @use "/src/scss/blocks/bestsellers.scss";
