@@ -3,6 +3,7 @@
 .product-card {
     width: calc((100% - 60px) / 3);
     cursor: pointer;
+    text-decoration: none;
 
     .add-to-cart {
         display: none;
@@ -41,7 +42,8 @@
         gap: 5px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
         position: relative;
 
         .add-to-cart {

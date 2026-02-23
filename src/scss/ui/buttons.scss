@@ -7,11 +7,26 @@
     background-color: $black;
     font-size: 21px;
     color: $white;
+
+    &:hover {
+        background-color: transparent;
+        color: $black;
+    }
+
+    &:active {
+        transform: scale(102%, 102%);
+    }
+
+    &:focus-visible {
+        background-color: $white;
+        color: $black;
+        outline: 1px solid $black;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .button-black {
-        max-width: 236px;
+        max-width: 237px;
         font-size: 17px;
     }
 }
